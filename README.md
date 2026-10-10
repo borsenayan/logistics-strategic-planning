@@ -12,28 +12,27 @@ It cleans order data, calculates KPIs, explores the data with charts, predicts d
 
 ## Folder layout
 ```
-src/
-  generate_sample_data.py     makes up orders and inventory data
-  01_cleaning_features.py     cleaning and new columns
-  02_kpis_eda.py              baseline KPIs and charts
-  03_lead_time_regression.py  lead time regression and late order classifier
-  04_zone_clustering.py       KMeans clusters of delivery zones
-  05_forecast_inventory.py    Holt Winters forecast, EOQ and reorder point
-  06_route_optimization.py    vehicle routing with OR-Tools
-data/       generated CSV files (not tracked by Git)
-outputs/    charts and result tables
+generate_sample_data.py     makes up orders and inventory data
+01_cleaning_features.py     cleaning and new columns
+02_kpis_eda.py              baseline KPIs and charts
+03_lead_time_regression.py  lead time regression and late order classifier
+04_zone_clustering.py       KMeans clusters of delivery zones
+05_forecast_inventory.py    Holt Winters forecast, EOQ and reorder point
+06_route_optimization.py    vehicle routing with OR-Tools
+data/       generated CSV files (created when you run the scripts)
+outputs/    charts and result tables (created when you run the scripts)
 ```
 
 ## How to run it
 ```
 pip install -r requirements.txt
-python src/generate_sample_data.py
-python src/01_cleaning_features.py
-python src/02_kpis_eda.py
-python src/03_lead_time_regression.py
-python src/04_zone_clustering.py
-python src/05_forecast_inventory.py
-python src/06_route_optimization.py
+python generate_sample_data.py
+python 01_cleaning_features.py
+python 02_kpis_eda.py
+python 03_lead_time_regression.py
+python 04_zone_clustering.py
+python 05_forecast_inventory.py
+python 06_route_optimization.py
 ```
 Run every command from the main project folder.
 
